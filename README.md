@@ -1,12 +1,12 @@
 Go - Amazon Kinesis Example
-----------------------
+========
 
 Uses Send Grid's [Go Kinesis lib](https://github.com/sendgridlabs/go-kinesis)
 
 Extends their example.
 
 Commands
-========
+--------
 
 Prefix all commands with your `env` variables.
 
@@ -15,20 +15,20 @@ Prefix all commands with your `env` variables.
 * AWS_REGION_NAME
 
 `
-export AWS_ACCESS_KEY=YOUR_ACCESS_KEY; export AWS_SECRET_KEY=YOUR_SECRET_KEY; export AWS_REGION_NAME=region;
+export AWS_ACCESS_KEY=YOUR_ACCESS_KEY; export AWS_SECRET_KEY=YOUR_SECRET_KEY; export AWS_REGION_NAME=region; go COMMAND
 `
 
 Setup
-=====
+-----
 
-Create a stream
+Create a stream (you can also do this via [Amazon's console](https://console.aws.amazon.com/kinesis/home))
 
 `
  go run producer/main.go -stream=test1
 `
 
 Run
-===
+---
 
 ### Consumer
 
@@ -44,9 +44,9 @@ go run producer/main.go -stream=test1 -batch_size=1 -batch_count=1
 
 
 Tear Down
-=========
+---------
 
-Delete a stream
+Delete a stream (you can also do this via [Amazon's console](https://console.aws.amazon.com/kinesis/home))
 
 `
 go run producer/main.go -setup=false -stream=test1
